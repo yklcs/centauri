@@ -1,0 +1,7 @@
+<header class="site-header">
+  {{ if .IsHome }}
+  <a href="{{ .Site.BaseURL }}" class="site-logo">lucas·land</a>
+  {{ else }}
+  <a href="{{ .Site.BaseURL }}" class="site-logo-single">lucas·land</a>
+  {{ end }}
+</header>

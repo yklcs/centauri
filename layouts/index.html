@@ -1,0 +1,42 @@
+{{ define "main" }}
+<main aria-role="main" class="home-main">
+  {{ partial "links" . }}
+  <div class="home-content">
+    {{.Content}}
+  </div>
+  <div class="home-lists">
+    <div class="home-pages">
+      <h2 class="home-section-title">pages</h2>
+      <div class="home-items">
+        {{ range first 10 (where .Site.RegularPages "Section" "")}}
+        <a href="{{ .Permalink }}" class="link-page">
+          <h3 class="link-page-title">{{ .Title }}</h3>
+          <p class="link-page-desc">{{ .Summary }}</p>
+        </a>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="home-posts">
+      <a href="posts" class="home-section-title">posts</a>
+      <div class="home-items">
+        {{ range first 10 (where .Site.RegularPages "Section" "posts")}}
+        <a href="{{ .Permalink }}" class="link-post">
+          <h3 class="link-post-title">{{ .Title }}</h3>
+          <div class="link-post-meta">
+            <span>{{ index .Params.categories }}</span>
+            <sep></sep>
+            <span>{{ .Date.Format "2006-01" }}</span>
+          </div>
+        </a>
+        {{ end }}
+      </div>
+      <a class="more-posts" href="posts">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </a>
+    </div>
+  </div>
+</main>
+{{ end }}

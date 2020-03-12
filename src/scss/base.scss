@@ -1,0 +1,65 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Muli, sans-serif;
+  background-color: $color-bg;
+  color: $color-txt;
+  max-width: $width;
+  margin: auto;
+}
+
+header {
+  margin: 0 1.5em;
+}
+
+.site-header {
+  margin: 6em 1.5em;
+  max-width: $width;
+}
+
+pre, code {
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+.site-logo-sub {
+  color: $color-sub;
+}
+
+.list-post {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin: 3em 0;
+  padding: 0 0 3em 0;
+  border-bottom: 1px solid $color-sub;
+}
+
+.list-post-meta {
+  font: 300 1em Iosevka;
+}
+
+*:focus {
+  outline: none;
+}
+
+sep {
+  width: 2px;
+  height: 2px;
+  border-left: 2px solid $color-txt;
+  margin: 0 0.5em;
+}
+
+::selection {
+  background: $color-hl2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlight span {
+  display: inline;
+}

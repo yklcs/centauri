@@ -1,0 +1,14 @@
+<footer>
+  {{ if .IsHome }}
+  <span>Made with ❤ by Lucas Lee</span>
+  {{ else }}
+  <div class="btns">
+    <a href="#top">
+      {{ partial "up-btn" }}
+    </a>
+    <a href="../">
+      {{ partial "back-btn" }}
+    </a>
+  </div>
+  {{ end }}
+</footer>

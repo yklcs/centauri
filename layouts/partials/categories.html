@@ -1,0 +1,10 @@
+<div class="posts-categories">
+  {{ $.Scratch.Add "i" 0 }}
+  {{ range $key, $value := .Site.Taxonomies.categories}}
+  {{ if (lt ($.Scratch.Get "i") 3)}}
+  <a href='{{"categories" | relLangURL}}/{{ $key }}' class="posts-category">{{ $key }}</a>
+  <sep></sep>
+  {{ end }}
+  {{ $.Scratch.Add "i" 1}}
+  {{ end }}
+</div>

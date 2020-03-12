@@ -1,0 +1,22 @@
+.home-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 0 3em 0;
+
+  a {
+    font: 400 1.2em "IBM Plex Mono";
+    text-decoration: none;
+    color: $color-txt;
+    margin: 0 1em;
+
+    &:hover,
+    &:focus {
+      color: $color-hl;
+    }
+
+    &:first-child {
+      margin: 0 1em 0 0;
+    }
+  }
+}

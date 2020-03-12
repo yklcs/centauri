@@ -1,0 +1,133 @@
+.home-main {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.home-pages {
+  flex: 1 0 20em;
+  // border-left: 1px solid $color-sub;
+  margin: 4em 0 0 0;
+  // padding: 0 0 0 1em;
+  height: fit-content;
+}
+
+.home-posts {
+  flex: 2 0 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // border-left: 1px solid $color-sub;
+  margin: 4em 0 0 0;
+  // padding: 0 0 0 1em;
+  height: fit-content;
+
+  .more-posts {
+    font: 400 1.5em/40% Muli;
+    width: 1em;
+    margin: 0 auto;
+    color: $color-txt;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      width: fit-content;
+    }
+  }  
+}
+
+.home-section-title {
+  font: italic 500 1.4em "IBM Plex Mono";
+  margin: 0;
+}
+
+.home-items {
+  margin: 3em 0 0 0;
+  // border-left: 1px solid $color-sub;
+}
+
+.home-section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.link-page {
+  display: block;
+  margin: 0 0 2.5em 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  .link-page-title {
+    font-weight: 600;
+    margin: 0.5em 0;
+  }
+
+  .link-page-desc {
+    font-style: italic;
+    margin: 0.5em 0;
+    color: $color-txt;
+  }
+}
+
+.link-post {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .link-post-title {
+    font-weight: 400;
+    margin: 0.5em 0;
+  }
+
+  .link-post-meta {
+    display: flex;
+    align-items: center;
+    font-family: "IBM Plex Mono";
+    color: $color-txt;
+  }
+
+  line {
+    flex: 1 0 0;
+    margin: 0 1em;
+  }
+}
+
+.home-main a {
+  color: $color-txt;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $color-hl;
+  }
+}
+
+.posts-categories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1em 0 0 0;
+
+  .posts-category {
+    font: 400 1em "IBM Plex Mono";
+    margin: 0 0.5em 0 0;
+  }
+
+  sep:last-child {
+    border: none;
+  }
+}
+
+.home-content {
+  font: 600 1.2em "Muli";
+}

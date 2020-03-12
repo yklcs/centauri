@@ -1,0 +1,21 @@
+.site-logo, .site-logo-sub, .site-logo-single {
+  font: italic 800 3em Muli;
+  color: $color-hl;
+  text-decoration: none;
+  margin: auto;
+  display: block;
+}
+
+.site-logo-single {
+  font: italic 800 2.5em Muli;
+}
+
+.site-header {
+  margin: 6em 2em 2em 2em;
+}
+
+@media only screen and (max-width: $width) {
+  .site-logo-single {
+    max-width: $width-content;
+  }
+}

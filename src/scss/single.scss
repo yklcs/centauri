@@ -1,0 +1,113 @@
+.content {
+  max-width: $width-content;
+
+  p {
+    font: 400 1.1em/160% Muli;
+  }
+}
+
+.summary {
+  font: 400 1.2em/160% Muli;
+}
+
+
+.small-meta {
+  font: 400 1em "IBM Plex Mono";
+  margin: 0 0 3em 0;
+  display: none;
+  
+  .data, .tags {
+    color: $color-sub;
+  }
+}
+
+.data, .tags {
+  a {
+    text-decoration: underline dotted;
+    &:hover {
+      color: $color-txt;
+    }
+  }
+}
+
+.anchor {
+  color: $color-sub;
+  text-decoration: none;
+  font-weight: 300;
+
+  &:hover {
+    color: $color-hl;
+  }
+}
+
+.toc {
+}
+
+.single-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  margin: 0 2em;
+
+  main {
+    flex: 1 1 $width-content;
+  }
+  aside {
+    flex: 1 0 10em;
+    margin: 2em 2em 0 0;
+
+
+    nav#TableOfContents {
+      border-left: 1px solid $color-sub;
+
+      a {
+        text-decoration: none;
+        color: $color-txt;
+      }
+
+      ul {
+        list-style: none outside;
+        padding: 0 1em;
+        line-height: 1.7;
+
+        a:hover,
+        a:focus {
+          color: $color-hl;
+        }
+      }
+
+      .meta {
+        display: block;
+      }
+    }
+
+    .meta {
+      font: 400 1em "IBM Plex Mono";
+    }
+  }
+}
+
+// h1, h2, h3, h4, h5, h6 {
+//   font-family: "IBM Plex Mono";
+//   font-weight: 400;
+// }
+
+// h1#title {
+//   font-style: italic;
+//   font-size: 2.4em;
+// }
+
+@media only screen and (max-width: $width) {
+  aside {
+    display: none;
+  }
+
+  .single-main {
+    margin: auto;
+    max-width: $width-content;
+  }
+
+  .small-meta {
+    display: block;
+  }
+}

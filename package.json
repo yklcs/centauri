@@ -1,0 +1,26 @@
+{
+  "name": "centauri",
+  "version": "1.0.0",
+  "description": "A simple theme for Hugo",
+  "scripts": {
+    "build": "gulp build",
+    "serve": "hugo serve -D",
+    "run": "hugo serve -D && gulp watch",
+    "watch": "gulp watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.13.1"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
+}

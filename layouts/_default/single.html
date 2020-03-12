@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="single-wrapper">
+  <main class="single-main">
+    <h1 id="title">{{ .Title }}</h1>
+
+    <div class="small-meta">
+      {{ with .Params.categories }}
+      <span class="data">{{ $.Date.Format "Mon Jan 2, 2006" }} in
+        <a href="{{ "categories" | absURL }}/{{. | urlize}}">{{ . }}</a></span>
+      {{ end }}
+      {{ with .Params.tags }}
+      <div class="tags">
+        <span>tags:</span>
+        {{ range . }}
+        <a href="{{ "tags" | absURL }}/{{ . | urlize}}">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+      {{ with .Params.summary}}
+      <p class="summary">
+        {{ . }}
+      </p>
+      {{ end }}
+    </div>
+
+    <div>
+      <article class="content">
+        <!-- {{ .Content }} -->
+        {{ .Content | replaceRE "(<h[1-9] id=\"([^\"]+)\".+)(</h[1-9]+>)" `${1}&nbsp;<a class="anchor" href="#${2}">#</a> ${3}` | safeHTML }}
+      </article>
+    </div>
+  </main>
+  <aside class="side">
+    <div class="meta">
+      {{ with .Params.categories }}
+      <span class="data">{{ $.Date.Format "Mon Jan 2, 2006" }} in
+        <a href="{{ "categories" | absURL }}/{{ . | urlize }}">{{ . }}</a></span>
+      {{ end }}
+      {{ with .Params.tags }}
+      <div class="tags">
+        <span>tags:</span>
+        {{ range . }}
+        <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+
+    </div>
+    {{ with .Params.summary}}
+    <p class="summary">
+      {{ . }}
+    </p>
+    {{ end }}
+    {{ .TableOfContents }}
+  </aside>
+
+</div>
+
+{{ end }}

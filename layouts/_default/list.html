@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main clas="wrapper">
+  <article>
+    <header>
+      <h1>{{.Title}}</h1>
+    </header>
+    {{.Content}}
+  </article>
+  <div class="list-posts">
+    {{ range .Pages }}
+    <a href="{{ .Permalink }}" class="list-post">
+      <h3 class="list-post-title">{{ .Title }}</h3>
+      <p class="list-post-summary">{{ .Summary }}...</p>
+      <span class="list-post-meta">{{ dateFormat "02 Jan 06 15:04 MST" .Date.UTC }}</span>
+    </a>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

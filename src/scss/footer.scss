@@ -1,0 +1,30 @@
+footer {
+  margin: 4em 1.5em 2em 1.5em;
+  color: $color-sub;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  .btns {
+    display: inline;
+
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  
+    .back-btn,
+    .up-btn {
+      width: 2em;
+      height: 2em;
+      fill: $color-sub;
+  
+      &:hover,
+      &:focus {
+        fill: $color-hl;
+      }
+    }
+  }
+}
